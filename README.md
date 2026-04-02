@@ -37,7 +37,7 @@ Ou clique duas vezes no arquivo `index.html` .
 |------|------------------|
 | GET /buscar_alunos | Ao carregar a página |
 | GET /buscar_por_curso | Ao clicar em um filtro |
-| GET /buscar_aluno/<id> | Ao Ccicar em Editar |
+| GET /buscar_aluno/<id> | Ao Clicar em Editar |
 |POST /cadastrar_aluno | Ao salvar novo aluno |
 |PUT /atualizar_aluno/<id> | Ao salvar edição |
 |DELETE /deletar_aluno/<id> | Ao confirmar a remoção |
