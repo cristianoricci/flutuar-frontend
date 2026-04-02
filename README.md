@@ -1,6 +1,6 @@
 # 🪂 Flutuar Parapente — Frontend
 
-Interface web para gernciamento de alunos interessados em curso de parapente.
+Interface web para gerenciamento de alunos interessados em curso de parapente.
 Desenvolvida com HTML, CSS e JavaScript.
 
 ## Descrição
