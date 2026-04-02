@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🪂 Flutuar Parapente</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">🪂</div>
+    <h1>FLUTUAR <span>PARAPENTE</span></h1>
+    <p>Sistema de Cadastro de Alunos</p>
+  </header>
+
+  <div class="stats-bar">
+    <div class="stat-pill">Total <span id="stat-total">0</span></div>
+    <div class="stat-pill">Iniciante <span id="stat-iniciante">0</span></div>
+    <div class="stat-pill">Cross <span id="stat-cross">0</span></div>
+    <div class="stat-pill">Voo Duplo <span id="stat-duplo">0</span></div>
+  </div>
+
+  <div class="filter-bar">
+    <span>Filtrar:</span>
+    <button onclick="filtrar('todos')">Todos</button>
+    <button onclick="filtrar('Iniciante')">Iniciante</button>
+    <button onclick="filtrar('Cross')">Cross</button>
+    <button onclick="filtrar('Voo Duplo')">Voo Duplo</button>
+    <button class="btn-novo" onclick="abrirModal()">+ Novo Aluno</button>
+  </div>
+
+  <div id="lista-alunos">
+    <p class="empty">Nenhum aluno cadastrado ainda.</p>
+  </div>
+
+  <div class="overlay" id="overlay">
+    <div class="modal">
+      <button class="modal-close" onclick="fecharModal()">✕</button>
+      <h2 id="modal-titulo">NOVO ALUNO</h2>
+      <input type="hidden" id="aluno-id">
+      <div class="form-group">
+        <label>Nome Completo *</label>
+        <input type="text" id="f-nome" placeholder="Ex: Maria Aparecida">
+      </div>
+      <div class="form-group">
+        <label>Telefone *</label>
+        <input type="text" id="f-telefone" placeholder="Ex: 35999998888">
+      </div>
+      <div class="form-group">
+        <label>E-mail *</label>
+        <input type="email" id="f-email" placeholder="Ex: maria@email.com">
+      </div>
+      <div class="form-group">
+        <label>Curso *</label>
+        <select id="f-curso">
+          <option value="">Selecione um curso...</option>
+          <option value="Iniciante">Iniciante</option>
+          <option value="Cross">Cross</option>
+          <option value="Voo Duplo">Voo Duplo</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Nível IPPI</label>
+        <select id="f-ippi">
+          <option value="">Selecione um nível...</option>
+          <option value="1">Nível 1</option>
+          <option value="2">Nível 2</option>
+          <option value="3">Nível 3</option>
+          <option value="4">Nível 4</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Observações</label>
+        <textarea id="f-obs" placeholder="Disponibilidade, experiência prévia, etc."></textarea>
+      </div>
+      <button class="btn-salvar" id="btn-salvar" onclick="salvarAluno()">CADASTRAR ALUNO</button>
+    </div>
+  </div>
+
+  <div id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
